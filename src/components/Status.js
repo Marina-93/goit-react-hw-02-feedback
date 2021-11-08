@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './styles.css'
 
 const Status = ({good,neutral,bad,total,positiveFeedback}) => (
@@ -11,5 +12,13 @@ const Status = ({good,neutral,bad,total,positiveFeedback}) => (
         <p>Positive feedback:<span className="span">{positiveFeedback}</span></p>
     </>
 )
+
+Status.propTypes = {
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,
+    total: PropTypes.number,
+    positiveFeedback: PropTypes.string
+}
 
 export default Status;
